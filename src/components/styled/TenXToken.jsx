@@ -99,7 +99,7 @@ export default function TenXToken({
         <Box
           as="a"
           target="_blank"
-          href={`${LINK_GECKOTERMINAL}/token/${czusdPair}`}
+          href={`${LINK_GECKOTERMINAL}/bsc/pools/${czusdPair}`}
           sx={{
             margin: 0,
             padding: 0,
