@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
-import { Typography, Box, Slider, TextField } from '@mui/material';
+import {
+  Typography,
+  Box,
+  Slider,
+  TextField,
+  InputAdornment,
+  Tooltip,
+} from '@mui/material';
+import {
+  HelpOutline,
+  QuestionMarkOutlined,
+  QuestionMarkRounded,
+} from '@mui/icons-material';
 
 export default function TextFieldStyled({
   text,
@@ -7,6 +19,7 @@ export default function TextFieldStyled({
   maxChar,
   width,
   label,
+  helpMsg,
 }) {
   return (
     <TextField
@@ -23,6 +36,23 @@ export default function TextFieldStyled({
         const newText = event.target.value.substr(0, maxChar);
         setText(newText);
       }}
+      InputProps={
+        !!helpMsg && {
+          startAdornment: (
+            <InputAdornment position="start">
+              <Tooltip title={helpMsg}>
+                <HelpOutline
+                  sx={{
+                    fontSize: '1em',
+                    marginRight: '-0.5em',
+                    cursor: 'help',
+                  }}
+                />
+              </Tooltip>
+            </InputAdornment>
+          ),
+        }
+      }
     />
   );
 }

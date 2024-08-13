@@ -10,7 +10,7 @@ export default function DialogPause() {
         address={ADDRESS_TCU29SALE}
         abi={Tcu29SaleAbi}
         functionName="managerPause"
-        title="PAUSE 10X Launchpad"
+        title="PAUSE 10X Deployer"
         btn={
           <Button
             sx={{
@@ -35,7 +35,7 @@ export default function DialogPause() {
         }
       >
         <Typography sx={{ fontSize: '1.25em', lineHeight: '1.25em' }}>
-          Pauses the 10X Launchpad, preventing anyone from purchasing TCu29.
+          Pauses the 10X Deployer, preventing anyone from purchasing TCu29.
         </Typography>
       </DialogTransaction>
     </>

@@ -18,9 +18,9 @@ export default function MenuLinkSocialIcon({
         paddingTop: '8px',
         paddingBottom: '1px',
         '&:hover': {
-          borderBottom: 'solid 1px #EF915B',
           paddingTop: '8px',
-          paddingBottom: '0px',
+          paddingBottom: '1px',
+          opacity: '0.5',
         },
         ...css,
       }}

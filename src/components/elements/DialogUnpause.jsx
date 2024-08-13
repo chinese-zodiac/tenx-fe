@@ -10,7 +10,7 @@ export default function DialogUnpause() {
         address={ADDRESS_TCU29SALE}
         abi={Tcu29SaleAbi}
         functionName="managerUnpause"
-        title="UNPAUSE 10X Launchpad"
+        title="UNPAUSE 10X Deployer"
         btn={
           <Button
             sx={{
@@ -35,7 +35,7 @@ export default function DialogUnpause() {
         }
       >
         <Typography sx={{ fontSize: '1.25em', lineHeight: '1.25em' }}>
-          Unpauses the 10X Launchpad, allowing anyone to purchase TCu29 if it is
+          Unpauses the 10X Deployer, allowing anyone to purchase TCu29 if it is
           available in the dapp.
         </Typography>
       </DialogTransaction>

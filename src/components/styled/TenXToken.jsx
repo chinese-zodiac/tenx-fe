@@ -128,10 +128,10 @@ export default function TenXToken({
         </Box>
       </Box>
       <Typography>
-        Buy Tax/Burn: {(buyTax / 100).toFixed(2)}% /{' '}
+        Buy Fee/Burn: {(buyTax / 100).toFixed(2)}% /{' '}
         {(buyBurn / 100).toFixed(2)}
         %<br />
-        Sell Tax/Burn: {(sellTax / 100).toFixed(2)}% /{' '}
+        Sell Fee/Burn: {(sellTax / 100).toFixed(2)}% /{' '}
         {(sellBurn / 100).toFixed(2)}%
       </Typography>
       <ButtonPrimary

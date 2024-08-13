@@ -9,11 +9,11 @@ if (!import.meta.env.VITE_WALLETCONNECT_CLOUD_ID) {
 const projectId = import.meta.env.VITE_WALLETCONNECT_CLOUD_ID;
 const chains = [bsc];
 const metadata = {
-  name: '10X Launchpad',
+  name: 'TenX Automated Deployer',
   description:
-    '10X Your Token With A $10,000 Locked Liquidity Grant With The TenX Launchpad Powered By Pancakeswap.',
-  url: 'https://10x.cz.cash',
-  icons: ['https://10x.cz.cash/images/logo.png'],
+    "Create your digital product effortlessly with TenX's automated deployer. Enhance community value, leverage digital marketing, and enjoy free marketing with our $10k grant. Activate your global project today!",
+  url: 'https://TenX.cz.cash',
+  icons: ['https://TenX.cz.cash/images/logo.png'],
 };
 
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });

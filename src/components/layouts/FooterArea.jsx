@@ -28,15 +28,6 @@ export default function FooterArea({ sx }) {
           ...sx,
         }}
       >
-        <Stack alignItems="center" justifyContent="center">
-          10X Contract Addresses (BSC)
-          <br />
-          TenXLaunch: {ADDRESS_TENXLAUNCH}
-          <br />
-          CZUSD: {ADDRESS_CZUSD}
-          <br />
-          <br />
-        </Stack>
         <Container>
           <Grid2
             container
@@ -62,25 +53,25 @@ export default function FooterArea({ sx }) {
               >
                 <MenuLinkSocialIcon
                   href={LINK_TWITTER}
-                  src="./images/icons/Twitter-Blue-Light.svg"
-                  alt="Discord"
+                  src="./images/icons/Twitter-White.svg"
+                  alt="Twitter"
                   width={27}
                   height={23}
                 />
                 <MenuLinkSocialIcon
                   href={LINK_TELEGRAM}
-                  src="./images/icons/TG-Blue-Light.svg"
+                  src="./images/icons/TG-White.svg"
                   alt="Telegram"
                   width={27}
                   height={23}
                 />
-                <MenuLinkSocialIcon
+                {/*<MenuLinkSocialIcon
                   href={LINK_DISCORD}
                   src="./images/icons/Discord-Blue-Light.svg"
                   alt="Discord"
                   width={27}
                   height={23}
-                />
+                />*/}
               </Stack>
             </Grid2>
             <Grid2 xs={12}>
@@ -89,13 +80,13 @@ export default function FooterArea({ sx }) {
             <Grid2 xs={12}>
               <p>
                 By accessing any CZODIAC website, including but not limited to
-                CZODIAC's decentralized applications and services, and engaging
-                in any activities related to the CZODIAC ecosystem, including
-                buying, selling, trading, holding CZODIAC tokens, or
-                participating in the CZODIAC community, users acknowledge that
-                they have read, understood, and agreed to be bound by the terms
-                and conditions set forth in CZODIAC's Terms of Use. The Terms of
-                Use, available at{' '}
+                CZODIAC's applications and services, and engaging in any
+                activities related to the CZODIAC ecosystem, including buying,
+                selling, trading, holding CZODIAC products, or participating in
+                the CZODIAC community, users acknowledge that they have read,
+                understood, and agreed to be bound by the terms and conditions
+                set forth in CZODIAC's Terms of Use. The Terms of Use, available
+                at{' '}
                 <a css={{ color: 'antiquewhite' }} href={LINK_TERMS_OF_USE}>
                   {LINK_TERMS_OF_USE}
                 </a>
@@ -104,10 +95,10 @@ export default function FooterArea({ sx }) {
                 in any activities related to the CZODIAC ecosystem. If users do
                 not agree to the terms and conditions set forth in the Terms of
                 Use, they should not access or use CZODIAC's websites, dapps,
-                tokens, or other offerings. By using any CZODIAC website, users
-                represent and warrant that they have the legal capacity to enter
-                into a binding agreement with CZODIAC and that they comply with
-                all applicable laws and regulations.
+                products, or other offerings. By using any CZODIAC website,
+                users represent and warrant that they have the legal capacity to
+                enter into a binding agreement with CZODIAC and that they comply
+                with all applicable laws and regulations.
                 <br />
                 <br />
                 <a css={{ color: 'antiquewhite' }} href={LINK_TERMS_OF_USE}>

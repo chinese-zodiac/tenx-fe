@@ -63,7 +63,7 @@ export default function ConnectWallet(sx) {
             </>
           ) : (
             <>
-              <Tooltip title="Login Your Wallet">
+              <Tooltip title="Login">
                 <Button
                   onClick={() => web3ModalOpen({ view: 'Connect' })}
                   sx={{

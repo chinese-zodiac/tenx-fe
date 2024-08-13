@@ -18,12 +18,12 @@ import TenXTokenList from '../components/elements/TenXTokenList';
 export default function Home() {
   const { address, isConnecting, isDisconnected } = useAccount();
 
-  const [name, setName] = useState('TokenX');
-  const [symbol, setSymbol] = useState('TKX');
-  const [buyTax, setBuyTax] = useState(125);
-  const [buyBurn, setBuyBurn] = useState(50);
-  const [sellTax, setSellTax] = useState(175);
-  const [sellBurn, setSellBurn] = useState(75);
+  const [name, setName] = useState('ProductX');
+  const [symbol, setSymbol] = useState('PRDX');
+  const [buyTax, setBuyTax] = useState(25);
+  const [buyBurn, setBuyBurn] = useState(25);
+  const [sellTax, setSellTax] = useState(275);
+  const [sellBurn, setSellBurn] = useState(175);
 
   return (
     <>
@@ -38,8 +38,9 @@ export default function Home() {
         }}
       />
       <Typography as="h1" sx={{ fontSize: '2em' }}>
-        10X Launchpad
+        Create Your Digital Product in Seconds.
       </Typography>
+
       <Typography
         as="p"
         sx={{
@@ -50,8 +51,9 @@ export default function Home() {
           lineHeight: '1.2em',
         }}
       >
-        10X Your Token With A $10,000 Locked Liquidity Grant With The TenX
-        Launchpad Powered By Pancakeswap.
+        Unlock Community Value, Digital Marketing,
+        <br />
+        Free Marketing, and $10,000 Business Grants
         <br />
         <br />
         Ask Questions On Telegram:
@@ -80,34 +82,40 @@ export default function Home() {
           setText={setName}
           maxChar={10}
           width="8em"
-          label="Token Name"
+          label="Product Name"
+          helpMsg="Name for your new product. up to 10 characters."
         />
         <TextFieldStyled
           text={symbol}
           setText={setSymbol}
           maxChar={5}
           width="5em"
-          label="Ticker"
+          label="Code"
+          helpMsg="Shortened name for your new product. Up to 5 characters."
         />
         <SliderPercentagePicker
           pct={buyTax}
           setPct={setBuyTax}
-          label="Buy Tax"
+          label="Buy Fee"
+          helpMsg="Fee that will be sent to your account every time someone buys your product on cz.cash. Good for revenue. Maximum 9.00%"
         />
         <SliderPercentagePicker
           pct={buyBurn}
           setPct={setBuyBurn}
           label="Buy Burn"
+          helpMsg="Portion of the product that will be destroyed every time someone buys on cz.cash. Good for scarcity. Maximum 9.00%"
         />
         <SliderPercentagePicker
           pct={sellTax}
           setPct={setSellTax}
-          label="Sell Tax"
+          label="Sell Fee"
+          helpMsg="Fee that will be sent to your account every time someone sells your product on cz.cash. Good for revenue. Maximum 9.00%"
         />
         <SliderPercentagePicker
           pct={sellBurn}
           setPct={setSellBurn}
           label="Sell Burn"
+          helpMsg="Portion of the product that will be destroyed every time someone sells on cz.cash. Good for scarcity. Maximum 9.00%"
         />
       </Stack>
       <br />
@@ -148,7 +156,7 @@ export default function Home() {
                 },
               }}
             >
-              LAUNCH NOW 🚀
+              CREATE NOW 🚀
             </ButtonPrimary>
           }
         >
@@ -167,9 +175,9 @@ export default function Home() {
             <br />
             Supply: 5,000 {symbol}
             <br />
-            Buy Tax: {(buyTax / 100).toFixed(2)}%<br />
+            Buy Fee: {(buyTax / 100).toFixed(2)}%<br />
             Buy Burn: {(buyBurn / 100).toFixed(2)}%<br />
-            Sell Tax: {(sellTax / 100).toFixed(2)}%<br />
+            Sell Fee: {(sellTax / 100).toFixed(2)}%<br />
             Sell Burn: {(sellBurn / 100).toFixed(2)}%
             <br />
             <br />
@@ -207,7 +215,7 @@ export default function Home() {
       <br />
       <br />
       <Typography as="h1" sx={{ fontSize: '2em' }}>
-        10X Tokens
+        TenX Products
       </Typography>
       <Stack
         direction="row"
