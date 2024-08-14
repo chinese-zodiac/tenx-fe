@@ -191,16 +191,16 @@ export default function Home() {
                       left: 0px;
                     }
                     25% {
-                      top: -2px;
-                      left: -1px;
+                      top: -3px;
+                      left: -2px;
                     }
                     50% {
-                      top: -1px;
-                      left: 1px;
+                      top: -2px;
+                      left: 2px;
                     }
                     75% {
-                      top: -1px;
-                      left: -1px;
+                      top: -2px;
+                      left: -2px;
                     }
                     100% {
                       top: 0px;
