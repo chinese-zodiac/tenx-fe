@@ -11,13 +11,5 @@ export default defineConfig({
         plugins: ['@emotion/babel-plugin'],
       },
     }),
-    VitePluginRadar({
-      // Google Analytics tag injection
-      gtm: [
-        {
-          id: 'AW-16657419279',
-        },
-      ],
-    }),
   ],
 });

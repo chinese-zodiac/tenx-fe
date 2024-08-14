@@ -21,6 +21,7 @@ import useTenXToken from '../hooks/useTenXToken';
 import SliderPercentagePicker from '../components/styled/SliderPercentagePicker';
 import TextFieldStyled from '../components/styled/TextFieldStyled';
 import TenXTokenList from '../components/elements/TenXTokenList';
+import ReactGA from 'react-ga4';
 
 export default function Home() {
   const { address, isConnecting, isDisconnected } = useAccount();
@@ -145,6 +146,11 @@ export default function Home() {
           btn={
             <ButtonPrimary
               onClick={() => {
+                ReactGA.event({
+                  category: 'tenx_action',
+                  action: 'click_createnow_btn_1',
+                  label: 'Click on "create now btn 1" on tenx.cz.cash', // optional
+                });
                 handleConfirmed();
               }}
               sx={{

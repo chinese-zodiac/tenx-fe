@@ -1,6 +1,7 @@
 import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react';
 import { bsc } from 'viem/chains';
 import { WagmiConfig } from 'wagmi';
+import ReactGA from 'react-ga4';
 
 //WAGMI + WALLETCONNECT
 if (!import.meta.env.VITE_WALLETCONNECT_CLOUD_ID) {
@@ -22,6 +23,14 @@ const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 createWeb3Modal({ wagmiConfig, projectId, chains });
 
 function App({ children }) {
+  useEffect(() => {
+    ReactGA.initialize('AW-16657419279');
+    ReactGA.send({
+      hitType: 'pageview',
+      page: '/tenx-cz-cash',
+      title: 'tenx.cz.cash homepage',
+    });
+  }, []);
   return <WagmiConfig config={wagmiConfig}>{children}</WagmiConfig>;
 }
 

@@ -27,11 +27,11 @@
     "react": "^18.2.0",
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^18.2.0",
+    "react-ga4": "^2.1.0",
     "react-router-dom": "^6.8.1",
     "react-window": "^1.8.8",
     "usehooks-ts": "^2.9.1",
     "viem": "^1.19.6",
-    "vite-plugin-radar": "^0.9.6",
     "wagmi": "^1.4.7",
     "zustand": "^4.4.1"
   },
