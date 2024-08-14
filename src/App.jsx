@@ -2,6 +2,7 @@ import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react';
 import { bsc } from 'viem/chains';
 import { WagmiConfig } from 'wagmi';
 import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
 
 //WAGMI + WALLETCONNECT
 if (!import.meta.env.VITE_WALLETCONNECT_CLOUD_ID) {

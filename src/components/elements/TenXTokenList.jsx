@@ -7,8 +7,8 @@ export default function TenXTokenList({ start, count }) {
   return (
     <>
       {!!tenXTokenArray &&
-        tenXTokenArray.map((tenXToken) => (
-          <TenXToken key={tenXToken.address} {...tenXToken} />
+        tenXTokenArray.map((tenXToken, index) => (
+          <TenXToken key={tenXToken.address + '-' + index} {...tenXToken} />
         ))}
     </>
   );
