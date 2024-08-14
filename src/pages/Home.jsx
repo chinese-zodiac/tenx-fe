@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import { useAccount, useBalance, useContractRead } from 'wagmi';
 import ConnectWallet from '../components/elements/ConnectWallet';
-import { Typography, Box, Stack, TextField, Slider } from '@mui/material';
+import {
+  Typography,
+  Box,
+  Stack,
+  TextField,
+  Slider,
+  keyframes,
+} from '@mui/material';
 import FooterArea from '../components/layouts/FooterArea';
 import { LINK_TELEGRAM } from '../constants/links';
 import ButtonPrimary from '../components/styled/ButtonPrimary';
@@ -147,16 +154,62 @@ export default function Home() {
                 position: 'relative',
                 fontWeight: 'bold',
                 textTransform: 'none',
-                color: '#e16b31',
+                color: 'white',
                 borderRadius: '1.5em',
                 border: 'solid 5px #e16b31',
-                backgroundColor: '#f3f3f3',
+                background:
+                  'radial-gradient(circle, rgba(116,29,131,1) 0%, rgba(149,54,68,1) 75%, rgba(108,10,57,1) 100%);',
+                backgroundSize: '400% 400%',
+                transition: '250ms',
+                animation: `${keyframes`
+                  0% {
+                      background-position: 0% 0%;
+                    }
+                    25% {
+                      background-position: 66% 33%;
+                    }
+                    50% {
+                      background-position: 0% 100%;
+                    }
+                    75% {
+                      background-position: 33% 66%;
+                    }
+                    100% {
+                      background-position: 0% 0%;
+                    }`} 15s infinite ease`,
                 '&:hover': {
-                  backgroundColor: '#080830',
+                  animationDuration: '1500ms',
+                  color: 'pink',
+                },
+                '&:hover > span': {
+                  position: 'relative',
+                  top: '0px',
+                  left: '0px',
+                  animation: `${keyframes`
+                  0% {
+                      top: 0px;
+                      left: 0px;
+                    }
+                    25% {
+                      top: -2px;
+                      left: -1px;
+                    }
+                    50% {
+                      top: -1px;
+                      left: 1px;
+                    }
+                    75% {
+                      top: -1px;
+                      left: -1px;
+                    }
+                    100% {
+                      top: 0px;
+                      left: 0px;
+                    }`} 50ms infinite ease`,
                 },
               }}
             >
-              CREATE NOW 🚀
+              CREATE NOW <Box as="span">🚀</Box>
             </ButtonPrimary>
           }
         >

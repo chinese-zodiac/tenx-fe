@@ -10,7 +10,10 @@ export default function SliderPercentagePicker({
 }) {
   return (
     <>
-      <Box sx={{ backgroundColor: '#f3f3f3', width: '16em' }}>
+      <Box
+        sx={{ backgroundColor: '#f3f3f3', width: '16em' }}
+        className="input-box"
+      >
         <Slider
           value={pct}
           onChange={(event) => setPct(event.target.value)}
