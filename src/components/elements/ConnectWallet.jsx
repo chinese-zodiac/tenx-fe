@@ -6,6 +6,7 @@ import { useWeb3Modal, useWeb3ModalState } from '@web3modal/wagmi/react';
 import makeBlockie from 'ethereum-blockies-base64';
 import React from 'react';
 import { useAccount, useDisconnect } from 'wagmi';
+import ReactGA from 'react-ga4';
 
 export default function ConnectWallet(sx) {
   const {
@@ -31,7 +32,14 @@ export default function ConnectWallet(sx) {
             <>
               <Tooltip title="Open Wallet Settings">
                 <Button
-                  onClick={() => web3ModalOpen({ view: 'Account' })}
+                  onClick={() => {
+                    ReactGA.event({
+                      category: 'tenx_action',
+                      action: 'click_account_btn',
+                      label: 'Click on "account btn" on tenx.cz.cash', // optional
+                    });
+                    web3ModalOpen({ view: 'Account' });
+                  }}
                   sx={{
                     width: '8em',
                     position: 'relative',
@@ -65,7 +73,14 @@ export default function ConnectWallet(sx) {
             <>
               <Tooltip title="Login">
                 <Button
-                  onClick={() => web3ModalOpen({ view: 'Connect' })}
+                  onClick={() => {
+                    ReactGA.event({
+                      category: 'tenx_action',
+                      action: 'click_connect_wallet_btn',
+                      label: 'Click on "connect wallet btn" on tenx.cz.cash', // optional
+                    });
+                    web3ModalOpen({ view: 'Connect' });
+                  }}
                   sx={{
                     width: '8em',
                     position: 'relative',

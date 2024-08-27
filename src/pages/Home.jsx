@@ -246,6 +246,12 @@ export default function Home() {
       ) : (
         <ButtonPrimary
           onClick={() => {
+            ReactGA.event({
+              category: 'tenx_action',
+              action: 'click_createnow_btn_1_not_connected',
+              label:
+                'Click on "create now btn 1" on tenx.cz.cash when not connected', // optional
+            });
             alert('Connect your BSC (BNB Smart Chain) Wallet first.');
           }}
           sx={{
@@ -264,7 +270,7 @@ export default function Home() {
             },
           }}
         >
-          LAUNCH NOW 🚀
+          CREATE NOW 🚀
         </ButtonPrimary>
       )}
 

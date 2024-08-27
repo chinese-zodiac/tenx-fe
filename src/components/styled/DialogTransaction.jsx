@@ -5,6 +5,7 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import { useDebounce } from 'usehooks-ts';
 import { useContractWrite, usePrepareContractWrite } from 'wagmi';
 import DialogConfirm from './DialogConfirm';
+import ReactGA from 'react-ga4';
 
 export default function DialogTransaction({
   btn,
@@ -40,20 +41,64 @@ export default function DialogTransaction({
   const txHash = data?.hash ?? '';
 
   const handleClickOpen = () => {
+    ReactGA.event({
+      category: 'tenx_action',
+      action: 'open_tx_dialog_' + title,
+      label:
+        'Opened a transaction dialog on tenx.cz.cash: ' +
+        title +
+        ' | address: ' +
+        address, // optional
+    });
     setOpen(true);
   };
 
   const handleClose = () => {
+    ReactGA.event({
+      category: 'tenx_action',
+      action: 'close_tx_dialog_' + title,
+      label:
+        'Closed a transaction dialog on tenx.cz.cash: ' +
+        title +
+        ' | address: ' +
+        address, // optional
+    });
     setOpen(false);
   };
 
   const handleCloseTxStatus = () => {
+    ReactGA.event({
+      category: 'tenx_action',
+      action: 'close_tx_status_' + title,
+      label:
+        'Closed tx status on tenx.cz.cash: ' + title + ' | address: ' + address, // optional
+    });
+
     setOpenTxStatus(false);
   };
 
   const handleConfirmed = () => {
+    ReactGA.event({
+      category: 'tenx_action',
+      action: 'send_tx_attempt_' + title,
+      label:
+        'Attempting a transaction on tenx.cz.cash: ' +
+        title +
+        ' | address: ' +
+        address, // optional
+    });
     //send tx
     write();
+
+    ReactGA.event({
+      category: 'tenx_action',
+      action: 'send_tx_success_' + title,
+      label:
+        'Sucessfully sent a transaction on tenx.cz.cash: ' +
+        title +
+        ' | address: ' +
+        address, // optional
+    });
     //open watch tx dialog
     handleClose();
     setOpenTxStatus(true);

@@ -2,9 +2,15 @@ import { Button, DialogContent, Typography } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
 import { Box } from '@mui/system';
 import * as React from 'react';
+import ReactGA from 'react-ga4';
 
 export default function DialogError({ children, title, sx, open, setOpen }) {
   const handleClose = () => {
+    ReactGA.event({
+      category: 'tenx_action',
+      action: 'close_error_dialog_' + title,
+      label: 'Closed an error dialog on tenx.cz.cash: ' + title, // optional
+    });
     setOpen(false);
   };
 

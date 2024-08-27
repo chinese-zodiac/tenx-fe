@@ -1,9 +1,10 @@
-import { Box, Button, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Stack, Typography, useTheme } from '@mui/material';
 import { LINK_BSCSCAN, LINK_GECKOTERMINAL } from '../../constants/links';
 import ButtonPrimary from './ButtonPrimary';
 import ButtonImageLink from './ButtonImageLink';
 import { czCashBuyLink } from '../../utils/czcashLink';
 import { useAccount } from 'wagmi';
+import ReactGA from 'react-ga4';
 
 export default function TenXToken({
   tokenAddress,
