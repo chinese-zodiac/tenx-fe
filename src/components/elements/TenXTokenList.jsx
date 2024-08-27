@@ -7,9 +7,12 @@ export default function TenXTokenList({ start, count }) {
   return (
     <>
       {!!tenXTokenArray &&
-        tenXTokenArray.map((tenXToken, index) => (
-          <TenXToken key={tenXToken.address + '-' + index} {...tenXToken} />
-        ))}
+        tenXTokenArray.map(
+          (tenXToken, index) =>
+            tenXToken?.tokenAddress && (
+              <TenXToken key={tenXToken?.tokenAddress} {...tenXToken} />
+            )
+        )}
     </>
   );
 }
