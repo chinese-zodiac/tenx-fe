@@ -89,8 +89,14 @@ export default function DialogTransaction({
         address, // optional
     });
     if (conversion == 'LAUNCH') {
-      ReactGA.gtag('event', 'conversion', {
+      ReactGA.event({
+        category: 'conversion',
         send_to: '16657419279/foVBCImrss8ZEI-Y8IY-',
+        label:
+          'Attempting a transaction on tenx.cz.cash: ' +
+          title +
+          ' | address: ' +
+          address, // optional
       });
     }
     //send tx
