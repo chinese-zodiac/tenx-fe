@@ -130,6 +130,7 @@ export default function Home() {
       {!!address ? (
         <DialogTransaction
           title={'LAUNCH ' + symbol}
+          conversion={'LAUNCH'}
           address={ADDRESS_TENXLAUNCH}
           abi={TenXLaunchAbi}
           functionName="launchToken"

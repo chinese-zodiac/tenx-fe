@@ -11,6 +11,7 @@ export default function DialogTransaction({
   btn,
   children,
   title,
+  conversion,
   sx,
   address,
   abi,
@@ -87,6 +88,11 @@ export default function DialogTransaction({
         ' | address: ' +
         address, // optional
     });
+    if (conversion == 'LAUNCH') {
+      ReactGA.gtag('event', 'conversion', {
+        send_to: '16657419279/foVBCImrss8ZEI-Y8IY-',
+      });
+    }
     //send tx
     write();
 
