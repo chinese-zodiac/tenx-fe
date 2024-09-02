@@ -79,26 +79,25 @@ export default function DialogTransaction({
   };
 
   const handleConfirmed = () => {
-    ReactGA.event({
-      category: 'tenx_action',
-      action: 'send_tx_attempt_' + title,
-      label:
-        'Attempting a transaction on tenx.cz.cash: ' +
-        title +
-        ' | address: ' +
-        address, // optional
-    });
-    if (conversion == 'LAUNCH') {
+    try {
       ReactGA.event({
-        category: 'conversion',
-        send_to: '16657419279/foVBCImrss8ZEI-Y8IY-',
+        category: 'tenx_action',
+        action: 'send_tx_attempt_' + title,
         label:
           'Attempting a transaction on tenx.cz.cash: ' +
           title +
           ' | address: ' +
           address, // optional
       });
-    }
+      if (conversion == 'LAUNCH') {
+        ReactGA.event({
+          category: 'tenx_action',
+          action: 'conversion',
+          //send_to: '16657419279/foVBCImrss8ZEI-Y8IY-',
+          label: 'Yes confirm product create tx btn',
+        });
+      }
+    } catch (e) {}
     //send tx
     write();
 
