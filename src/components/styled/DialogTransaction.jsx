@@ -93,7 +93,7 @@ export default function DialogTransaction({
         ReactGA.event({
           category: 'tenx_action',
           action: 'conversion',
-          send_to: '16657419279/foVBCImrss8ZEI-Y8IY-',
+          send_to: 'AW-16657419279/foVBCImrss8ZEI-Y8IY-',
           label: 'Yes confirm product create tx btn',
         });
       }
