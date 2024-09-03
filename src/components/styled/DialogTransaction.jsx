@@ -90,10 +90,11 @@ export default function DialogTransaction({
           address, // optional
       });
       if (conversion == 'LAUNCH') {
-        ReactGA.event({
-          category: 'tenx_action',
+        ReactGA.gtag('event', 'your_action', {
           action: 'conversion',
+          category: 'Conversion',
           label: 'foVBCImrss8ZEI-Y8IY-',
+          send_to: 'AW-16657419279/foVBCImrss8ZEI-Y8IY-',
         });
       }
     } catch (e) {}
