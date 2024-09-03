@@ -90,7 +90,7 @@ export default function DialogTransaction({
           address, // optional
       });
       if (conversion == 'LAUNCH') {
-        ReactGA.gtag('event', 'your_action', {
+        ReactGA.gtag('event', 'conversion', {
           action: 'conversion',
           category: 'Conversion',
           label: 'foVBCImrss8ZEI-Y8IY-',
